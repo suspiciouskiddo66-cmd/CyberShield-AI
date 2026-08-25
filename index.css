@@ -1,0 +1,302 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#070b14] text-slate-100 antialiased min-h-screen selection:bg-cyan-500 selection:text-black;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Cyber card glassmorphism effect */
+.cyber-card {
+  @apply bg-[#0d1527]/90 border border-slate-800/80 rounded-xl backdrop-blur-md shadow-lg transition-all duration-300;
+}
+
+.cyber-card:hover {
+  @apply border-slate-700 shadow-cyan-950/20;
+}
+
+.cyber-card-glow {
+  @apply bg-[#0d1527]/90 border border-cyan-500/30 rounded-xl backdrop-blur-md shadow-[0_0_20px_rgba(6,182,212,0.15)];
+}
+
+/* Cyber Gradient Buttons */
+.cyber-btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-semibold shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:shadow-[0_0_25px_rgba(6,182,212,0.5)] transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.cyber-btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-slate-200 font-medium transition-all duration-200 active:scale-95 disabled:opacity-50;
+}
+
+.cyber-btn-danger {
+  @apply inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-lg bg-red-500/20 hover:bg-red-500/30 border border-red-500/40 text-red-400 font-medium transition-all duration-200 active:scale-95;
+}
+
+.cyber-btn-success {
+  @apply inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 text-emerald-400 font-medium transition-all duration-200 active:scale-95;
+}
+
+/* =========================================================================
+   PLAIN CLEAN WHITE THEME — WITH VIVID CYBERSECURITY FEATURE HIGHLIGHTS
+   ========================================================================= */
+html.theme-plain-white,
+html.theme-plain-white body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Clean White Cyber Cards with Vivid Accents */
+html.theme-plain-white .cyber-card {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03) !important;
+}
+
+html.theme-plain-white .cyber-card:hover {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 12px 28px -4px rgba(2, 132, 199, 0.12), 0 4px 10px -2px rgba(2, 132, 199, 0.06) !important;
+}
+
+/* Sidebar in Clean White with Glowing Cyan Active Item */
+html.theme-plain-white aside {
+  background-color: #ffffff !important;
+  border-right: 1px solid #e2e8f0 !important;
+  box-shadow: 4px 0 25px rgba(15, 23, 42, 0.04) !important;
+}
+
+html.theme-plain-white aside .text-slate-500 {
+  color: #64748b !important;
+}
+
+html.theme-plain-white aside a {
+  color: #334155 !important;
+}
+
+html.theme-plain-white aside a:hover {
+  background-color: #f1f5f9 !important;
+  color: #0284c7 !important;
+}
+
+/* Active Nav Item Highlight in White Mode */
+html.theme-plain-white aside a.active,
+html.theme-plain-white aside .bg-gradient-to-r.from-cyan-500\/20 {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.12) 0%, rgba(59, 130, 246, 0.08) 100%) !important;
+  border: 1px solid rgba(2, 132, 199, 0.35) !important;
+  color: #0284c7 !important;
+  font-weight: 700 !important;
+}
+
+/* Header in Frosted White */
+html.theme-plain-white header {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Typography Hierarchy in White Mode */
+html.theme-plain-white h1,
+html.theme-plain-white h2,
+html.theme-plain-white h3,
+html.theme-plain-white .text-slate-100,
+html.theme-plain-white .text-slate-200 {
+  color: #0f172a !important;
+}
+
+html.theme-plain-white .text-slate-300,
+html.theme-plain-white .text-slate-400 {
+  color: #475569 !important;
+}
+
+/* Cyber Banners & Feature Highlights */
+html.theme-plain-white .bg-gradient-to-r.from-\[\#0a1124\]\/90,
+html.theme-plain-white .bg-gradient-to-r.from-\[\#120f26\]\/90 {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 60%, #ffffff 100%) !important;
+  border: 1px solid #7dd3fc !important;
+  box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.1) !important;
+}
+
+html.theme-plain-white .bg-gradient-to-r.from-\[\#0a1124\]\/90 h1,
+html.theme-plain-white .bg-gradient-to-r.from-\[\#120f26\]\/90 h1 {
+  color: #0369a1 !important;
+}
+
+/* Form Inputs in White Mode */
+html.theme-plain-white input,
+html.theme-plain-white select,
+html.theme-plain-white textarea {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+}
+
+html.theme-plain-white input:focus,
+html.theme-plain-white select:focus,
+html.theme-plain-white textarea:focus {
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15) !important;
+}
+
+/* Primary Button in White Mode (Vivid Cyan-to-Blue with White Text) */
+html.theme-plain-white .cyber-btn-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
+}
+
+html.theme-plain-white .cyber-btn-primary:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #1d4ed8 100%) !important;
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.5) !important;
+}
+
+/* Secondary Button in White Mode */
+html.theme-plain-white .cyber-btn-secondary {
+  background-color: #f1f5f9 !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #1e293b !important;
+  font-weight: 600 !important;
+}
+
+html.theme-plain-white .cyber-btn-secondary:hover {
+  background-color: #e2e8f0 !important;
+  color: #0284c7 !important;
+}
+
+/* Tables in White Mode */
+html.theme-plain-white table thead {
+  background-color: #f1f5f9 !important;
+  color: #475569 !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+}
+
+html.theme-plain-white table tbody tr {
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+
+html.theme-plain-white table tbody tr:hover {
+  background-color: #f8fafc !important;
+}
+
+/* High-Contrast Threat Badges in White Mode */
+html.theme-plain-white .bg-red-500\/20,
+html.theme-plain-white .bg-red-950\/20 {
+  background-color: #fee2e2 !important;
+  color: #b91c1c !important;
+  border-color: #fca5a5 !important;
+}
+
+html.theme-plain-white .bg-orange-500\/20,
+html.theme-plain-white .bg-orange-950\/20 {
+  background-color: #ffedd5 !important;
+  color: #c2410c !important;
+  border-color: #fdba74 !important;
+}
+
+html.theme-plain-white .bg-amber-500\/20,
+html.theme-plain-white .bg-amber-950\/20 {
+  background-color: #fef3c7 !important;
+  color: #b45309 !important;
+  border-color: #fcd34d !important;
+}
+
+html.theme-plain-white .bg-emerald-500\/20,
+html.theme-plain-white .bg-emerald-950\/20 {
+  background-color: #dcfce7 !important;
+  color: #15803d !important;
+  border-color: #86efac !important;
+}
+
+html.theme-plain-white .bg-cyan-500\/20,
+html.theme-plain-white .bg-cyan-950\/20 {
+  background-color: #e0f2fe !important;
+  color: #0369a1 !important;
+  border-color: #7dd3fc !important;
+}
+
+/* Keep Dark Terminal Snippets for Contrast in White Mode */
+html.theme-plain-white .bg-black\/60,
+html.theme-plain-white .bg-black\/80 {
+  background-color: #0f172a !important;
+  color: #38bdf8 !important;
+  border-color: #1e293b !important;
+}
+
+/* Dialog Modals in White Mode */
+html.theme-plain-white .bg-\[\#0a0f1d\],
+html.theme-plain-white .bg-\[\#0d1527\] {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25) !important;
+}
+
+/* Real-Time Defense Telemetry HUD in Sidebar */
+html.theme-plain-white aside .bg-gradient-to-b.from-\[\#0d162a\]\/90 {
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%) !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+html.theme-plain-white aside .bg-\[\#060a14\]\/90 {
+  background-color: #f8fafc !important;
+  border-top: 1px solid #e2e8f0 !important;
+}
+
+/* =========================================================================
+   PLAIN BLACK THEME STYLES (OLED Pitch Black)
+   ========================================================================= */
+html.theme-plain-black,
+html.theme-plain-black body {
+  background-color: #000000 !important;
+  color: #f8fafc !important;
+}
+
+html.theme-plain-black .cyber-card {
+  background-color: #080808 !important;
+  border-color: #1a1a1a !important;
+}
+
+html.theme-plain-black .cyber-card:hover {
+  border-color: #2e2e2e !important;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.03) !important;
+}
+
+html.theme-plain-black aside {
+  background-color: #000000 !important;
+  border-color: #171717 !important;
+}
+
+html.theme-plain-black header {
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  border-color: #171717 !important;
+}
+
+html.theme-plain-black input,
+html.theme-plain-black select,
+html.theme-plain-black textarea {
+  background-color: #050505 !important;
+  border-color: #262626 !important;
+}
+
+/* High Contrast Mode */
+html.high-contrast {
+  filter: contrast(1.25);
+}
